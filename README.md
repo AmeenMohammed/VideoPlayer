@@ -1,4 +1,5 @@
-# videoAPIdisplay
+# Video Player
+  A simple app that displays videos
 
 ## Build Setup
 
