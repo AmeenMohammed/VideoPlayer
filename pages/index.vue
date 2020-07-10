@@ -1,27 +1,18 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
       <h1 class="title">
-        videoAPIdisplay
+        Video Display
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+      <div class="video-player">
+          <iframe
+            class="video-frame"
+            frameborder="0" type="text/html"
+            src="https://www.dailymotion.com/embed/video/xwr14q"
+            width="100%"
+            height="100%"
+            allowfullscreen >
+        </iframe>
       </div>
     </div>
   </div>
@@ -60,16 +51,21 @@ export default Vue.extend({})
   color: #35495e;
   letter-spacing: 1px;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.video-player{
+  position:relative;
+  padding-bottom:56.25%;
+  height:0;
+  overflow:hidden;
+  margin-top:15px;
+  margin-bottom:15px;
+}
+.video-frame{
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0px;
+  top:0px;
+  overflow:hidden;
 }
 
-.links {
-  padding-top: 15px;
-}
 </style>
